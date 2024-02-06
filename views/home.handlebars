@@ -1,0 +1,23 @@
+
+{{#if loggedIn}}
+    <p>Welcome, {{username}}!</p>
+{{else}}
+    <p>Please log in to post and comment.</p>
+{{/if}}
+
+<section>
+    <h2>All Posts</h2>
+    {{#each posts}}
+        <article>
+            <h3>{{this.title}}</h3>
+            <p>{{this.content}}</p>
+            <p>Posted by {{this.author}} on {{formatDate this.createdAt}}</p>
+            <h4>Comments:</h4>
+            <ul>
+                {{#each this.comments}}
+                    <li>{{this.content}} - by {{this.author}} on {{formatDate this.createdAt}}</li>
+                {{/each}}
+            </ul>
+        </article>
+    {{/each}}
+</section>
