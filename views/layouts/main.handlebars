@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
     <!-- Add your CSS links here a little later once you know what your doing with it -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -28,6 +29,9 @@
 
     <main>
         {{{body}}}
+        {{#if showDashboard}}
+            {{> dashboardContent}}
+        {{/if}}
     </main>
 
     <footer>

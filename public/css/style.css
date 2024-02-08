@@ -1,0 +1,84 @@
+/* style.css */
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2a0845;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #833ab4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc0cb;
+  }
+  
+  /* Main styles */
+  main {
+    padding: 20px;
+  }
+  
+  /* Form styles */
+  form {
+    background-color: #7d1e9a;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  label {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff6ec7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #f043b7;
+  }

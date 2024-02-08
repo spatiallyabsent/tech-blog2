@@ -1,35 +1,17 @@
-{{#if loggedIn}}
-    <h2>Welcome to Your Dashboard, {{username}}!</h2>
-{{else}}
-    <p>Please log in to access your dashboard.</p>
-{{/if}}
-
-<section>
-    <h3>Your Posts</h3>
-    {{#each posts}}
-        <article>
-            <h4>{{this.title}}</h4>
-            <p>{{this.content}}</p>
-            <p>Posted on {{formatDate this.createdAt}}</p>
-            <h5>Comments:</h5>
-            <ul>
-                {{#each this.comments}}
-                    <li>{{this.content}} - by {{this.author}} on {{formatDate this.createdAt}}</li>
-                {{/each}}
-            </ul>
-        </article>
-    {{/each}}
-</section>
-
-<section>
-    <h3>Create New Post</h3>
-    <form action="/api/posts" method="POST">
-        <label for="postTitle">Title:</label><br>
-        <input type="text" id="postTitle" name="title"><br>
-        <label for="postContent">Content:</label><br>
-        <textarea id="postContent" name="content"></textarea><br>
-        <button type="submit">Create Post</button>
-    </form>
-</section>
+<h1>Welcome to the Dashboard</h1>
+<h2>All Posts</h2>
+{{#each posts}}
+    <article>
+        <h3>{{this.title}}</h3>
+        <p>{{this.content}}</p>
+        <p>Posted by {{this.User.username}} </p>
+        <h4>Comments:</h4>
+        <ul>
+            {{#each this.UserComments}}
+                <li>{{this.content}} - by {{this.User.username}} </li>
+            {{/each}}
+        </ul>
+    </article>
+{{/each}}
 
 <!-- next we need to create the api to handle this page -->
